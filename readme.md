@@ -2,7 +2,7 @@
 description: Using old Tolino eBook Reader as Display for SignalK
 ---
 
-# readme.md
+# SignalkTolino
 
 ## eBook Reader
 
