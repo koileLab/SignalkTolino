@@ -6,6 +6,8 @@ description: Using old Tolino eBook Reader as Display for SignalK
 
 ## eBook Reader
 
+
+
 * Turning any Tolino
 * \*\*\*\*
 * **RelaunchX** AppLauncher & Filebrowser für Tolino aus F-Droid [https://f-droid.org/en/packages/com.gacode.relaunchx/](https://f-droid.org/en/packages/com.gacode.relaunchx/)
@@ -19,7 +21,7 @@ long story \(german\): [https://www.e-reader-forum.de/t/tolino-vision-2-rooten.1
 **short story - \(In my case the regular update keept the fastboot possibility, that's the reasion for this shortcut! Try it! If you loose loose fastboot possibility you can downgrade via the build in stock recovery and it's factory reset!\)**
 
 * Download update.zip for your device from [mytolino](https://mytolino.de/software-updates/)
-* Copy update.zip on tolino as mass storrage to root 
+* Copy update.zip on tolino as mass storrage to root
 * reboot tolino will resault fw update
 
 Making Custom Boot Image with ADB enabled
@@ -27,7 +29,7 @@ Making Custom Boot Image with ADB enabled
 ```text
 mkdir custom_boot_image
 cd custom_boot_image
-unzip ../update.zip 
+unzip ../update.zip
 mv boot.img boot.img.orig
 abootimg -x boot.img.orig
 mv initrd.img initrd.img.orig
@@ -86,7 +88,7 @@ sudo adb start-server
 
 Tastenkombis für alle Tolino Version für Recovery \(!\) nicht fastboot... [https://papierlos-lesen.de/faq/wie-laesst-sich-der-tolino-in-den-recoverymodus-versetzen/](https://papierlos-lesen.de/faq/wie-laesst-sich-der-tolino-in-den-recoverymodus-versetzen/)
 
-* Tolino in den Fastoot Modus versetzen \(Bei angeschlossenem USB ausschalten, Beleuchtungsknopf gedruckt halten, 
+* Tolino in den Fastoot Modus versetzen \(Bei angeschlossenem USB ausschalten, Beleuchtungsknopf gedruckt halten,
 * fastboot device \#Check Fasstboot cpowerknopf zusaetzlich gedrueckt halten\)
 
   onnectivity `fastboot devices` should return a long random value
@@ -100,6 +102,3 @@ Tastenkombis für alle Tolino Version für Recovery \(!\) nicht fastboot... [htt
   [https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html](https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html)
 
   Video: [https://diode.zone/videos/watch/b4ac9ba3-72aa-4756-ad32-c580ba9d221c](https://diode.zone/videos/watch/b4ac9ba3-72aa-4756-ad32-c580ba9d221c)
-
-
-
