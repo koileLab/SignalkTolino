@@ -5,7 +5,7 @@
 ## Overview
 
 * [ADB Sideloading](adbsideloadtolino.md)
-* \[SignalK-eInk App\]\(SignalK-eInk\)
+* SignalK-eInk
 * 
 Change1
 
