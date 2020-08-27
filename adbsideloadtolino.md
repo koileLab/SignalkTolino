@@ -6,15 +6,13 @@ description: Using old Tolino eBook Reader as Display for SignalK
 
 ## eBook Reader
 
-
-
 * Turning any Tolino
 * \*\*\*\*
 * **RelaunchX** AppLauncher & Filebrowser für Tolino aus F-Droid [https://f-droid.org/en/packages/com.gacode.relaunchx/](https://f-droid.org/en/packages/com.gacode.relaunchx/)
 * Kompatibilität von [https://github.com/ieb/sailinstruments/https://github.com/ieb/sailinstruments/](https://github.com/ieb/sailinstruments/https://github.com/ieb/sailinstruments/) mit Tolino prüfen
 * Alternative E-Ink App in SignalK [https://github.com/ieb/signalk-eink](https://github.com/ieb/signalk-eink)
 
-#### Custom App instalieren - long story short
+### Custom App instalieren - long story short
 
 long story \(german\): [https://www.e-reader-forum.de/t/tolino-vision-2-rooten.147429/](https://www.e-reader-forum.de/t/tolino-vision-2-rooten.147429/)
 
@@ -84,7 +82,7 @@ sudo adb start-server
 * You can install apps without actually rooting the tolino via f-droid
 * You can go to ReLaunchX Applauncher and go to android settings and go to developer option to temporarly activate ADB for sideload operations...
 
-#### TWRP für Tolino via [https://github.com/Ryogo-Z/tolino\_ntx\_6sl\_twrp/releases/](https://github.com/Ryogo-Z/tolino_ntx_6sl_twrp/releases/)
+### TWRP für Tolino via [https://github.com/Ryogo-Z/tolino\_ntx\_6sl\_twrp/releases/](https://github.com/Ryogo-Z/tolino_ntx_6sl_twrp/releases/)
 
 Tastenkombis für alle Tolino Version für Recovery \(!\) nicht fastboot... [https://papierlos-lesen.de/faq/wie-laesst-sich-der-tolino-in-den-recoverymodus-versetzen/](https://papierlos-lesen.de/faq/wie-laesst-sich-der-tolino-in-den-recoverymodus-versetzen/)
 
@@ -95,10 +93,11 @@ Tastenkombis für alle Tolino Version für Recovery \(!\) nicht fastboot... [htt
 
 * fastboot boot twrp.img \# use "boot" so you don't flash TWRP you only use it temporaly
 
-#### SignalK App
+### SignalK App
 
 * Basierend auf: [https://www.npmjs.com/package/@digitalyacht/sk-on-kindle](https://www.npmjs.com/package/@digitalyacht/sk-on-kindle) hat [https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html](https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html) eine Anpassung gemacht. In dem Kommentaren findet sich der Link zu seiner Dropbox mit dem Code: [https://www.dropbox.com/s/pfmssxxjzkpzd5b/kindle.zip?dl=0](https://www.dropbox.com/s/pfmssxxjzkpzd5b/kindle.zip?dl=0)
 
   [https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html](https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html)
 
   Video: [https://diode.zone/videos/watch/b4ac9ba3-72aa-4756-ad32-c580ba9d221c](https://diode.zone/videos/watch/b4ac9ba3-72aa-4756-ad32-c580ba9d221c)
+
