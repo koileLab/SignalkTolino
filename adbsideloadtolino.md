@@ -4,25 +4,23 @@ description: Using old Tolino eBook Reader as Display for SignalK
 
 # SignalkTolino
 
-## eBook Reader
+* Turning any Tolino into a custom App Launcher e.g. for a Fullscreen Display of SignalK Apps
 
-* Turning any Tolino
-* \*\*\*\*
-* **RelaunchX** AppLauncher & Filebrowser für Tolino aus F-Droid [https://f-droid.org/en/packages/com.gacode.relaunchx/](https://f-droid.org/en/packages/com.gacode.relaunchx/)
-* Kompatibilität von [https://github.com/ieb/sailinstruments/https://github.com/ieb/sailinstruments/](https://github.com/ieb/sailinstruments/https://github.com/ieb/sailinstruments/) mit Tolino prüfen
-* Alternative E-Ink App in SignalK [https://github.com/ieb/signalk-eink](https://github.com/ieb/signalk-eink)
+## Free your Book Reader 
 
 ### Custom App instalieren - long story short
 
 long story \(german\): [https://www.e-reader-forum.de/t/tolino-vision-2-rooten.147429/](https://www.e-reader-forum.de/t/tolino-vision-2-rooten.147429/)
 
-**short story - \(In my case the regular update keept the fastboot possibility, that's the reasion for this shortcut! Try it! If you loose loose fastboot possibility you can downgrade via the build in stock recovery and it's factory reset!\)**
+**short story - \(In my case the regular update kept the fastboot possibility, that's the reason for this shortcut! Try it! If you loose loose fastboot possibility you can downgrade via the build in stock recovery and it's factory reset!**
+
+### Updating the Tolino 
 
 * Download update.zip for your device from [mytolino](https://mytolino.de/software-updates/)
-* Copy update.zip on tolino as mass storrage to root
-* reboot tolino will resault fw update
+* Copy update.zip on tolino as mass storage to root directory
+* reboot tolino will result to a firmware update
 
-Making Custom Boot Image with ADB enabled
+### Generating Custom Boot Image with ADB enabled
 
 ```text
 mkdir custom_boot_image
@@ -36,7 +34,7 @@ cd initrd
 zcat ../initrd.img.orig | cpio -vid
 ```
 
-Auch hier wieder in der Datei default.prop "ro.secure=0", "ro.debuggable=1" und "persist.sys.usb.config=mass\_storage,adb" setzen. Ansonsten muss nichts weiter angepasst werden. Code:
+In the file  *default.prop* change `ro.secure=0` to `ro.debuggable=1` and set `persist.sys.usb.config=mass\_storage,adb` Nothing else has to be set, than run:
 
 ```text
 find . | cpio --create --format='newc' | gzip > ../initrd_adb_enabled.img
@@ -44,7 +42,7 @@ find . | cpio --create --format='newc' | gzip > ../initrd_adb_enabled.img
 abootimg --create boot_adb_enabled.img -f bootimg.cfg -k zImage -r initrd_adb_enabled.img
 ```
 
-It'l return an errormessage about unfitting filesize. Take the higher Number and convert it to hexadeicimal and insert it in the bootimg.cfg at filesize entry!!!
+It'll return an error message about the unfitting file size. Take the higher Number and convert it ([online](www.rapidtables.com)) to hexadeicimal and insert it in the bootimg.cfg at file size entry!!!
 
 Now yo can temporarly\(!\) mount this boot image with adb via `fastboot boot`
 
@@ -63,7 +61,7 @@ Now yo can temporarly\(!\) mount this boot image with adb via `fastboot boot`
 
 get [F-droid.apk](https://f-droid.org) and [reLaunchX.apk](https://f-droid.org/de/packages/com.gacode.relaunchx/)
 
-Sideload install both via:
+Sideload install the two via:
 
 ```text
 adb install f-droid.apk
@@ -77,27 +75,33 @@ adb kill-server
 sudo adb start-server
 ```
 
-* Now you can simply restart the tolino and It'l boot to stock
+* Now you can simply restart the tolino and It'll boot to stock
+
 * Choose ReLaunchX as custom Launcher, when asked on first startup \(You can move to Tolino Launcher/Menu any time by choosing it in relaunchX App Menu\)
+
 * You can install apps without actually rooting the tolino via f-droid
-* You can go to ReLaunchX Applauncher and go to android settings and go to developer option to temporarly activate ADB for sideload operations...
 
-### TWRP für Tolino via [https://github.com/Ryogo-Z/tolino\_ntx\_6sl\_twrp/releases/](https://github.com/Ryogo-Z/tolino_ntx_6sl_twrp/releases/)
+* You can go to ReLaunchX Applauncher and go to android settings and go to developer option to temporary activate ADB for sideload operations...
 
-Tastenkombis für alle Tolino Version für Recovery \(!\) nicht fastboot... [https://papierlos-lesen.de/faq/wie-laesst-sich-der-tolino-in-den-recoverymodus-versetzen/](https://papierlos-lesen.de/faq/wie-laesst-sich-der-tolino-in-den-recoverymodus-versetzen/)
+### Helpfull Stuff 
 
-* Tolino in den Fastoot Modus versetzen \(Bei angeschlossenem USB ausschalten, Beleuchtungsknopf gedruckt halten,
-* fastboot device \#Check Fasstboot cpowerknopf zusaetzlich gedrueckt halten\)
+**TWRP for Tolino** via [Ryogo-Zs Github](https://github.com/Ryogo-Z/tolino_ntx_6sl_twrp/releases/)
 
-  onnectivity `fastboot devices` should return a long random value
+Key combinations for all Tolinos to get in *Recovery* Mode (**not Fastboot**) on [Papierlos Lesen(german)](https://papierlos-lesen.de/faq/wie-laesst-sich-der-tolino-in-den-recoverymodus-versetzen/) 
 
-* fastboot boot twrp.img \# use "boot" so you don't flash TWRP you only use it temporaly
+## SignalK App: singalk-eink (recomended!)
 
-### SignalK App
+https://github.com/ieb/signalk-eink
 
-* Basierend auf: [https://www.npmjs.com/package/@digitalyacht/sk-on-kindle](https://www.npmjs.com/package/@digitalyacht/sk-on-kindle) hat [https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html](https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html) eine Anpassung gemacht. In dem Kommentaren findet sich der Link zu seiner Dropbox mit dem Code: [https://www.dropbox.com/s/pfmssxxjzkpzd5b/kindle.zip?dl=0](https://www.dropbox.com/s/pfmssxxjzkpzd5b/kindle.zip?dl=0)
+tbc
 
-  [https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html](https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html)
+## SignalK App: sk-on-kindle(Old Approach)
 
-  Video: [https://diode.zone/videos/watch/b4ac9ba3-72aa-4756-ad32-c580ba9d221c](https://diode.zone/videos/watch/b4ac9ba3-72aa-4756-ad32-c580ba9d221c)
+Not recommended. I failed at Code customization...
+
+Based on SignalK Plugin [sk-on-kindle](https://www.npmjs.com/paSignalkTolinockage/@digitalyacht/sk-on-kindle) erthold  Daum made a working SignalK-App for eBookReaders. Check out his [Blog](https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html) The Code is in his [Dropbox](https://www.dropbox.com/s/pfmssxxjzkpzd5b/kindle.zip?dl=0). We got in touch and he allowd me to modify and publish his code with attributing him. But my skills weren't sophisticated enough...
+
+A Videodemo of his App you can see on [PeerTube](https://diode.zone/videos/watch/b4ac9ba3-72aa-4756-ad32-c580ba9d221c)
+
+
 
