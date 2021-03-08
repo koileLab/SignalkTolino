@@ -4,7 +4,7 @@ description: Using old Tolino eBook Reader as Display for SignalK
 
 # SignalkTolino
 
-* Turning any Tolino into a custom App Launcher e.g. for a Fullscreen Display of SignalK Apps
+* Turning any [Tolino](https://mytolino.de) into a custom App Launcher e.g. for a Fullscreen Display of SignalK Apps
 
 ## Free your Book Reader 
 
@@ -44,7 +44,7 @@ abootimg --create boot_adb_enabled.img -f bootimg.cfg -k zImage -r initrd_adb_en
 
 It'll return an error message about the unfitting file size. Take the higher Number and convert it ([online](www.rapidtables.com)) to hexadeicimal and insert it in the bootimg.cfg at file size entry!!!
 
-Now yo can temporarly\(!\) mount this boot image with adb via `fastboot boot`
+Now yo can temporary\(!\) mount this boot image with adb via `fastboot boot`
 
 * set Tolino to Fastboot
   * Connect USB from Laptop to tolino
@@ -68,7 +68,7 @@ adb install f-droid.apk
 adb install com.gacode.relaunchx.apk # filename may vary
 ```
 
-maybe you need to restart adb as root - if you get error
+If you get error maybe you need to restart adb as root:
 
 ```text
 adb kill-server
