@@ -83,25 +83,13 @@ sudo adb start-server
 
 * You can go to ReLaunchX Applauncher and go to android settings and go to developer option to temporary activate ADB for sideload operations...
 
+**Having the full power of [F-Droid](https://f-droid.org) and pure .apk Installation you can install [lightning Browser form F-Droid](https://f-droid.org/de/packages/acr.browser.lightning/) that gives you nice fullscreen view and you can choose your favorite Way of Displaying SignalK Values. More Details [here](https://github.com/koileLab/SignalkTolino/blob/master/signalk-eink.md)**
+
 ### Helpfull Stuff 
 
 **TWRP for Tolino** via [Ryogo-Zs Github](https://github.com/Ryogo-Z/tolino_ntx_6sl_twrp/releases/)
 
 Key combinations for all Tolinos to get in *Recovery* Mode (**not Fastboot**) on [Papierlos Lesen(german)](https://papierlos-lesen.de/faq/wie-laesst-sich-der-tolino-in-den-recoverymodus-versetzen/) 
-
-## SignalK App: singalk-eink (recomended!)
-
-https://github.com/ieb/signalk-eink
-
-tbc
-
-## SignalK App: sk-on-kindle(Old Approach)
-
-Not recommended. I failed at Code customization...
-
-Based on SignalK Plugin [sk-on-kindle](https://www.npmjs.com/paSignalkTolinockage/@digitalyacht/sk-on-kindle) erthold  Daum made a working SignalK-App for eBookReaders. Check out his [Blog](https://projekt-kiri.blogspot.com/2018/12/loch-allmahlich-wird-es-zeit-kiri.html) The Code is in his [Dropbox](https://www.dropbox.com/s/pfmssxxjzkpzd5b/kindle.zip?dl=0). We got in touch and he allowd me to modify and publish his code with attributing him. But my skills weren't sophisticated enough...
-
-A Videodemo of his App you can see on [PeerTube](https://diode.zone/videos/watch/b4ac9ba3-72aa-4756-ad32-c580ba9d221c)
 
 
 
